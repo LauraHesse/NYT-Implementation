@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## Quiz: NYT Implementation
 
-You can use the [editor on GitHub](https://github.com/LauraHesse/NYT-Implementation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. Load Google Street View
+1. Load NYT Articles
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Quiz: Loading Streetview
+Google Streetview image requests must include the **size and location** parameters.
 
-### Markdown
+In the video, Cameron adds the concatenated **streetStr and cityStr** values to the string: ```http://maps.googleapis.com/maps/api/streetview?size=600x300&location=```
+to create a complete image request that includes the required parameters.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+Learn how to collect **<input>** values with jQuery [here](http://api.jquery.com/val/).
 
-# Header 1
-## Header 2
-### Header 3
+Interested in diving into the Google Street View API? Check out its [documentation](https://developers.google.com/maps/documentation/streetview/).
 
-- Bulleted
-- List
+### Quiz: NYT API Key
 
-1. Numbered
-2. List
+[Request a NY Times API Key](http://developer.nytimes.com/)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LauraHesse/NYT-Implementation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[The NYT article search API](http://developer.nytimes.com/article_search_v2.json)
