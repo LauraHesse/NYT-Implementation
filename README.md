@@ -21,8 +21,8 @@ Interested in diving into the Google Street View API? Check out its [documentati
 [The NYT article search API](http://developer.nytimes.com/article_search_v2.json)
 
 ---
+### Load google streetview
 ```
-    //Load google streetview
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
     var address = streetStr + ', ' + cityStr;
@@ -37,8 +37,8 @@ Interested in diving into the Google Street View API? Check out its [documentati
 
 ```
 ---
+### NYT API
 ```
-//get NYT API
 // Built by LucyBot. www.lucybot.com
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
@@ -65,4 +65,36 @@ Interested in diving into the Google Street View API? Check out its [documentati
         '</li>');
     }
 });
+```
+---
+### Wikipedia API
+```
+$.ajax({
+url: wikiLink,
+dataType: "jsonp",
+//jsonp: "callback",
+}).done(function(response) {
+    var articleList = response[1];
+
+    for (var i = 0 ; i < articleList.length; i++) {
+        articleStr = articleList[i];
+        var url = "http://en.wikipedia.org/wiki/" + articleStr;
+        $wikiElem.append('<li><a href="' + url + '">' + articleStr + "</a></li>");
+    }
+});
+```
+---
+### Error Handling With JSON P
+```
+var wikiFail = setTimeout(function(){
+    $wikiElem.text("Failed to get Wikipedia resources");
+}, 8000);
+
+//stop timeout from happening
+clearTimeout(wikiFail);
+```
+---
+### Debugging
+```
+
 ```
